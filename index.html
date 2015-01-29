@@ -387,8 +387,8 @@
              </div>
 
             <div class="form-group">
-                <label for="description1">Notater</label>
-                <textarea class="form-control" id="description1" placeholder="Indtast notater her..."></textarea>
+                <label for="NotesDescriptionID">Notater</label>
+                <textarea class="form-control" id="NotesDescriptionID" placeholder="Indtast notater her..."></textarea>
             </div>
 
             <div align="right" role="button">
@@ -400,26 +400,19 @@
         <div id="EstimateAndPaySectionID" class="well custom-well">
         <hr/>
 
-        <div id="EstimateAndPaySectionID">
-
             <h3>Estimat og straks betaling</h3>
 
-            <div id="AddedItemsID" class="list-group col-xs-6>
-                <h7 class="list-group-item-heading">Tilføjet genstande</h7>
-                <a href="#" class="list-group-item"><span class="badge">Afventer regning</span>
-                    Item 1</a>
-                <a href="#" class="list-group-item"><span class="badge">OK til betaling</span>
-                    Item 2</a>
-                <a href="#" class="list-group-item"><span class="badge">Betalt</span>
-                    Item 2</a>
+        <div id="AddedItemsID" class="list-group col-xs-6>
 
-                <a href="#" class="list-group-item"><span class="badge"style="background-color: orange">Afventer regning</span>
-                    Taske Item 1  *  Mulberry 1  *  1.000 kr. </a>
-                <a href="#" class="list-group-item"><span class="badge" style="background-color: orange">OK til betaling</span>
-                    Taske Item 2  *  Mulberry 2  *  2.000 kr. </a>
-                <a href="#" class="list-group-item"><span class="badge"style="background-color: #98c000">Betalt</span>
-                    Taske Item 3  *  Mulberry 3  *  3.000 kr. </a>
-            </div>
+            <h7 class="list-group-item-heading">Tilføjet genstande</h7>
+
+            <a href="#" class="list-group-item"><span class="badge"style="background-color: orange">Afventer regning</span>
+                Taske Item 1  *  Mulberry 1  *  1.000 kr. </a>
+            <a href="#" class="list-group-item"><span class="badge" style="background-color: orange">OK til betaling</span>
+                Taske Item 2  *  Mulberry 2  *  2.000 kr. </a>
+            <a href="#" class="list-group-item"><span class="badge"style="background-color:green">Betalt</span>
+                Taske Item 3  *  Mulberry 3  *  3.000 kr. </a>
+        </div>
 
             <div class="row form-group">
                 <div class="col-md-4">
@@ -474,11 +467,107 @@
             <div align="right" role="button">
                 <button id="saveButtonID" type="button" class="btn btn-primary">Gem</button>
                 <button id="saveAndPayButtonID" type="button" class="btn btn-default">Gem Udbet.</button>
-                    <button id="saveButtonID" type="button" class="btn btn-primary btn-sm">Gem</button>
-                    <button id="saveAndPayButtonID" type="button" class="btn btn-default btn-sm">Gem Udbet.</button>
             </div>
 
         </div>
+
+    <div id="TaskSectionID" class="well custom-well">
+
+        <h3>Opgaver</h3>
+
+        <div class="form-group">
+            <div class="col-md-6">
+                <label for="TaskDescriptionID">Opgavebeskrivelse</label>
+            </div>
+
+            <div class="btn-group col-md-6" align="right">
+                <input id="TaskPriorityLowID" type="radio" title="Low">
+                <input id="TaskPriorityMediumID" type="radio">
+                <input id="TaskPriorityHighID" type="radio">
+                <input id="TaskPrioritySuperHighID" type="radio">
+            </div>
+
+            <textarea class="form-control" id="TaskDescriptionID" placeholder="Indtast opgaver her..."></textarea>
+        </div>
+
+        <div class="row form-group">
+
+            <div class="col-md-4">
+                <label for="TaskTypeID">Opgave Type</label>
+                <select id="TaskTypeID" class="form-control">
+                    <option>Task Type 1</option>
+                    <option>Task Type 2</option>
+                    <option>Task Type 3</option>
+                    <option>Task Type 4</option>
+                    <option>Task Type 5</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label for="TaskViewDateID">Vis dato</label>
+                <input id="TaskViewDateID" class="form-control" type="date" placeholder="Dato">
+            </div>
+
+            <div class="col-md-4">
+                <label for="TaskDueDateID">Forfalden dato</label>
+                <input id="TaskDueDateID" class="form-control" type="date">
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-6">
+                <label for="TaskSourceID">Kilde</label>
+                <select id="TaskSourceID" class="form-control">
+                    <option>Task Source 1</option>
+                    <option>Task Source 2</option>
+                    <option>Task Source 3</option>
+                    <option>Task Source 4</option>
+                    <option>Task Source 5</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label for="TaskCategoryID">Kategori</label>
+                <select id="TaskCategoryID" class="form-control">
+                    <option>Task Kategori 1</option>
+                    <option>Task Kategori 2</option>
+                    <option>Task Kategori 3</option>
+                    <option>Task Kategori 4</option>
+                    <option>Task Kategori 5</option>
+                </select>
+            </div>
+
+         </div>
+
+        <div class="row form-group">
+            <div class="col-md-6">
+                <label for="SelectTaskParticipantID">Vælg impliceret</label>
+                <select id="SelectTaskParticipantID" class="form-control">
+                    <option>Task Participant 1</option>
+                    <option>Task Participant 2</option>
+                    <option>Task Participant 3</option>
+                    <option>Task Participant 4</option>
+                    <option>Task Participant 5</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label for="SelectClaimHanlderID">Vælg skadebehanlder</label>
+                <select id="SelectClaimHanlderID" class="form-control">
+                    <option>Task Claim Handler 1</option>
+                    <option>Task Claim Handler 2</option>
+                    <option>Task Claim Handler 3</option>
+                    <option>Task Claim Handler 4</option>
+                    <option>Task Claim Handler 5</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div align="right" role="button">
+            <button id="saveTaskButtonID" type="button" class="btn btn-primary btn-sm">Gem</button>
+        </div>
+     </div>
 
 </div>
 
