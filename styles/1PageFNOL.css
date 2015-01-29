@@ -43,3 +43,15 @@
 body {
     padding-top: 70px;
 }
+td.customer-information-item-headline{
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+td.customer-information-item-content{
+    padding-top: 5px;
+}
+
+tr.customer-information-item{
+    vertical-align: top;
+}

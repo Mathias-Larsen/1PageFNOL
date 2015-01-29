@@ -68,27 +68,40 @@
         <div class="panel panel-default">
             <div class="panel-heading">Kundeinformation</div>
             <div class="panel-body table-responsive">
-                <table>
-                    <tr>
-                        <td>Kundenavn</td>
-                        <td>Per Pedersen</td>
+                <table style="width: 100%" class="customer-information-item-content">
+                    <tr class="customer-information-item">
+                        <td class="customer-information-item-headline">Kundenavn</td>
+                        <td class="customer-information-item-content">Per Pedersen</td>
                     </tr>
-                    <tr>
-                    <td>Kundenummer</td>
-                    <td>176786823689</td>
+                    <tr class="customer-information-item">
+                        <td class="customer-information-item-headline">Kundenummer</td>
+                        <td class="customer-information-item-content">176786823689</td>
                     </tr>
-                    <tr>
-                        <td>Policetype</td>
-                        <td>Indbo</td>
+                    <tr class="customer-information-item">
+                        <td class="customer-information-item-headline">Policetype</td>
+                        <td class="customer-information-item-content">Indbo</td>
                     </tr>
-                    <tr>
-                        <td>Vilkårsnummer</td>
-                        <td>T37i87</td>
+                    <tr class="customer-information-item">
+                        <td class="customer-information-item-headline">Vilkårsnummer</td>
+                        <td class="customer-information-item-content">T37i87</td>
+
+                    </tr>
+                    <tr class="customer-information-item">
+                        <td class="customer-information-item-headline">Dækninger:</td>
+                        <td class="customer-information-item-content">Invaliditet<br>Død<br>Brille<br>Negl</td>
+
+                    </tr>
+                    <tr class="customer-information-item">
+                        <td class="customer-information-item-headline">Skadenummer:</td>
+                        <td class="customer-information-item-content">123 345 5432</td>
 
                     </tr>
 
                 </table>
-
+                <br>
+                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#policyInfo">
+                    Policeinformation
+                </button>
                 <!--<dl class="dl-horizontal" style="text-align: left;">
                     <dt>Kundenavn</dt>
                     <dd>Per Pedersen</dd>
@@ -386,6 +399,26 @@
 
         </div>
 </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="policyInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Policeinformation</h4>
+                </div>
+                <div class="modal-body">
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                    <br><br>
+                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <!-- start build -->
