@@ -7,6 +7,11 @@
     border-left: 0px;
     border-right: 0px;
 }
+.main-menu-item-sub{
+    border-left: 0px;
+    border-right: 0px;
+    padding-left: 40px;
+}
 
 .general-customer-info {
     border: 0px;
@@ -25,7 +30,6 @@
     position: fixed;
 }
 
-body{
+body {
     padding-top: 70px;
-
 }
