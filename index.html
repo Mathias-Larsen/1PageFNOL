@@ -324,11 +324,74 @@
 
         </div>
 
+
+        <div id="NotesSectionID" class="well custom-well">
+
+            <h3>Notater</h3>
+
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Collapsible Note Item #1
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            Test note details #1
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Collapsible Note Item #2
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            Test note details #2
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Collapsible Note Item #3
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            Test note details #3
+                        </div>
+                    </div>
+                </div>
+
+             </div>
+
+            <div class="form-group">
+                <label for="description1">Notater</label>
+                <textarea class="form-control" id="description1" placeholder="Indtast notater her..."></textarea>
+            </div>
+
+            <div align="right" role="button">
+                <button id="saveNoteButtonID" type="button" class="btn btn-primary btn-sm">Gem</button>
+            </div>
+
+        </div>
+
         <div id="EstimateAndPaySectionID" class="well custom-well">
 
             <h3>Estimat og straks betaling</h3>
-
-
 
             <div id="AddedItemsID" class="list-group col-xs-6>
                 <h7 class="list-group-item-heading">Tilføjet genstande</h7>
@@ -337,7 +400,7 @@
                     Taske Item 1  *  Mulberry 1  *  1.000 kr. </a>
                 <a href="#" class="list-group-item"><span class="badge" style="background-color: orange">OK til betaling</span>
                     Taske Item 2  *  Mulberry 2  *  2.000 kr. </a>
-                <a href="#" class="list-group-item"><span class="badge"style="background-color:green">Betalt</span>
+                <a href="#" class="list-group-item"><span class="badge"style="background-color: #98c000">Betalt</span>
                     Taske Item 3  *  Mulberry 3  *  3.000 kr. </a>
             </div>
 
@@ -398,9 +461,6 @@
 
         </div>
 
-        <div id="" class="well custom-well">
-
-        </div>
 </div>
 
     <!-- Modal -->
