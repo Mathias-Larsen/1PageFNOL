@@ -197,42 +197,42 @@
                 </button>
             </div>
         </div>
-        <div class="well custom-well custom-well-2">
+        <div id="CustomerSpecificDetails" class="well custom-well">
 
             <h3>Sags specifikke kontakts oplysninger</h3>
 
             <div class="row form-group">
                 <div class="col-md-8">
-                    <label for="customer">Kunden vil geme kontakts</label>
-                    <select id="customer" class="form-control">
+                    <label for="customerID">Kunden vil geme kontakts</label>
+                    <select id="customerID" class="form-control">
                         <option>Test Data 1</option>
                         <option>Test Data 2</option>
                         <option>Test Data 3</option>
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <label for="customerEmail">Kundes email</label>
-                    <input  id="customerEmail" type="email" class="form-control" placeholder="test@test.dk">
+                    <label for="customerEmailID">Kundes email</label>
+                    <input  id="customerEmailID" type="email" class="form-control" placeholder="test@test.dk">
                 </div>
             </div>
             <div class="row form-group">
                 <div class="col-md-4">
-                    <label for="customerTelephone">Kundes telefon nr.</label>
-                    <input  id="customerTelephone" type="tel" class="form-control">
+                    <label for="customerTelephoneID">Kundes telefon nr.</label>
+                    <input  id="customerTelephoneID" type="tel" class="form-control">
                 </div>
                 <div class="col-md-8">
-                    <label for="customerAddress">Att adresse / andet adresse</label>
-                    <input  id="customerAddress" type="text" class="form-control">
+                    <label for="customerAddressID">Att adresse / andet adresse</label>
+                    <input  id="customerAddressID" type="text" class="form-control">
                 </div>
             </div>
             <div class="row form-group">
                 <div class="col-md-4">
-                    <label for="customerRegistrationNumber">Reg.</label>
-                    <input  id="customerRegistrationNumber" type="number" class="form-control">
+                    <label for="customerRegistrationNumberID">Reg.</label>
+                    <input  id="customerRegistrationNumberID" type="number" class="form-control">
                 </div>
                 <div class="col-md-8">
-                    <label for="customerAccountNumber">Kundes telefon nr.</label>
-                    <input  id="customerAccountNumber" type="number" class="form-control">
+                    <label for="customerAccountNumberID">Kundes telefon nr.</label>
+                    <input  id="customerAccountNumberID" type="number" class="form-control">
 
                 </div>
             </div>
@@ -290,8 +290,101 @@
                 <textarea class="form-control" id="description1" placeholder="Indtast beskrivelse her..."></textarea>
             </div>
 
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label for="searchCodeID">Søg men kode</label>
+                    <select id="searchCodeID" class="form-control">
+                        <option>Test Data 1</option>
+                        <option>Test Data 2</option>
+                        <option>Test Data 3</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="sideOfTheBodyID">Side på kroppen</label>
+                    <input  id="sideOfTheBodyID" type="text" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <label for="regulationID">Reguleret %</label>
+                    <input  id="regulationID" type="number" class="form-control">
+                </div>
+            </div>
+
         </div>
-    </div>
+
+        <div id="EstimateAndPaySectionID" class="well custom-well">
+
+            <h3>Estimat og straks betaling</h3>
+
+            <div class="list-group">
+                <h7 class="list-group-item-heading">Tilføjet genstande</h7>
+                <a href="#" class="list-group-item"><span class="badge">Afventer regning</span>
+                Item 1</a>
+                <a href="#" class="list-group-item"><span class="badge">OK til betaling</span>
+                    Item 2</a>
+                <a href="#" class="list-group-item"><span class="badge">Betalt</span>
+                    Item 2</a>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label for="CategoryID">Vælg kategori</label>
+                    <select id="CategoryID" class="form-control">
+                        <option>Category 1</option>
+                        <option>Category </option>
+                        <option>Category 3</option>
+                        <option>Category 4</option>
+                        <option>Category 5</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="ProductID">Vælg produkt</label>
+                    <select id="ProductID" class="form-control">
+                        <option>Product 1</option>
+                        <option>Product 2</option>
+                        <option>Product 3</option>
+                        <option>Product 4</option>
+                        <option>Product 5</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="PrisID">Pris</label>
+                    <input id="PrisID" class="form-control">
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-8">
+                    <label for="StatusID">Vælg Status</label>
+                    <select id="StatusID" class="form-control">
+                        <option>Status 1</option>
+                        <option>Status 2</option>
+                        <option>Status 3</option>
+                        <option>Status 4</option>
+                        <option>Status 5</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="ParticipantID">Vælg Impliceret</label>
+                    <select id="ParticipantID" class="form-control">
+                        <option>Participant 1</option>
+                        <option>Participant 2</option>
+                        <option>Participant 3</option>
+                        <option>Participant 4</option>
+                        <option>Participant 5</option>
+                    </select>
+                </div>
+            </div>
+
+            <div align="right" role="button">
+                    <button id="saveButtonID" type="button" class="btn btn-primary">Gem</button>
+                    <button id="saveAndPayButtonID" type="button" class="btn btn-default">Gem Udbet.</button>
+            </div>
+
+        </div>
+
+        <div id="" class="well custom-well">
+
+        </div>
 </div>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
