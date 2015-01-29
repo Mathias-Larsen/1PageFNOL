@@ -7,6 +7,18 @@
     border-left: 0px;
     border-right: 0px;
 }
+
+.main-nav-item{
+    border-bottom: 1px solid;
+    padding: 0px;
+    border-color: #d3d3d3;
+}
+.main-nav-item-sub{
+    border-bottom: 1px solid;
+    border-color: #d3d3d3;
+    padding-left: 40px;
+}
+
 .main-menu-item-sub{
     border-left: 0px;
     border-right: 0px;
@@ -42,6 +54,7 @@
 
 body {
     padding-top: 70px;
+    position: relative;
 }
 td.customer-information-item-headline{
     font-weight: bold;

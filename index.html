@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/1PageFNOL.css">
 
 </head>
-<body ng-app="1pageFNOL">
+<body ng-app="1pageFNOL" data-spy="scroll" data-offset="0" data-target="#top-menu-scrollspy">
 
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -23,6 +23,8 @@
             <a class="navbar-brand" href="#">
                 <img height="28" src="images/topdanmark.png">
             </a>
+            <div>
+    </div>
         </div>
 
         <!-- collapse stuff -->
@@ -33,12 +35,18 @@
                         Skadeanlæggelse <span class="sr-only">(current)</span>
                     </a></li>
             </ul>
+            <ul class="nav navbar-nav visible-xs">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#policyInfo">
+                        Policeinformation <span class="sr-only">(current)</span>
+                    </a></li>
+            </ul>
             <div class="list-group visible-xs">
                 <a href="#" class="list-group-item active">Generelle skadeoplysninger</a>
                 <a href="#" class="list-group-item main-menu-item-sub">Sagsspecikke kontaktoplysning</a>
                 <a href="#" class="list-group-item main-menu-item">Personskadespecifikt</a>
-                <a href="#" class="list-group-item main-menu-item">Skadebeskrivelse</a>
-                <a href="#" class="list-group-item main-menu-item">Estimater / Betal</a>
+                <a href="#" class="list-group-item main-menu-item">Notater</a>
+                <a href="#" class="list-group-item main-menu-item">Estimat og straks betaling</a>
                 <a href="#" class="list-group-item main-menu-item">Opgaver</a>
                 <a href="#" class="list-group-item main-menu-item">Breve</a>
                 <a href="#" class="list-group-item main-menu-item">Afslut skaden</a>
@@ -55,16 +63,19 @@
 
 <div class="col-md-3 col-sm-3 col-lg-3 top-menu-outer visible-xs-block, hidden-xs" >
     <div class="col-md-3 col-sm-3 col-lg-3 top-menu top-menu-fixed">
-        <div class="list-group">
-            <a href="#" class="list-group-item active">Generelle skadeoplysninger</a>
-            <a href="#" class="list-group-item main-menu-item-sub">Sagsspecikke kontaktoplysning</a>
-            <a href="#" class="list-group-item main-menu-item">Personskadespecifikt</a>
-            <a href="#" class="list-group-item main-menu-item">Skadebeskrivelse</a>
-            <a href="#" class="list-group-item main-menu-item">Estimater / Betal</a>
-            <a href="#" class="list-group-item main-menu-item">Opgaver</a>
-            <a href="#" class="list-group-item main-menu-item">Breve</a>
-            <a href="#" class="list-group-item main-menu-item">Afslut skaden</a>
+        <div id="top-menu-scrollspy" class="list-group">
+            <ul class="nav nav-tabs nav-stacked">
+                <li class="active"><a href="#generalClaimInformation" class="list-group-item">Generelle skadeoplysninger</a></li>
+                <li><a href="#CustomerSpecificDetails" class="list-group-item main-menu-item-sub">Sagsspecikke kontaktoplysning</a></li>
+                <li><a href="#PersonalInjuryInformation" class="list-group-item main-menu-item">Personskadespecifikt</a></li>
+                <li><a href="#NotesSectionID" class="list-group-item main-menu-item">Notater</a></li>
+                <li><a href="#EstimateAndPaySectionID" class="list-group-item main-menu-item">Estimat og straks betaling</a></li>
+                <li><a href="#" class="list-group-item main-menu-item">Opgaver</a></li>
+                <li><a href="#" class="list-group-item main-menu-item">Breve</a></li>
+                <li><a href="#" class="list-group-item main-menu-item">Afslut skaden</a></li>
+                </ul>
         </div>
+        <br>
         <div class="panel panel-default">
             <div class="panel-heading">Kundeinformation</div>
             <div class="panel-body table-responsive">
@@ -124,7 +135,8 @@
 </div>
 
 <div class="col-md-8 col-lg-8 col-sm-8">
-    <div class="well">
+    <div>
+        <div id="generalClaimInformation" class="well">
         <div>
 
             <h3>Generelle skadeoplysninger</h3>
@@ -199,6 +211,7 @@
                     <label>Post nr. + By</label>
                     <input class="form-control">
                 </div>
+
             </div>
         </div>
 
@@ -256,10 +269,9 @@
                 </div>
             </div>
         </div>
-
         <hr/>
 
-        <div>
+        <div id="PersonalInjuryInformation">
 
             <h3>Personskadespecifikke oplysninger</h3>
 
