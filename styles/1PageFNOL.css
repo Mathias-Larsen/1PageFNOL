@@ -1,5 +1,4 @@
 .top-menu{
-    margin-left: 10px;
     font-size: 12px;
     border: 0px;
 }
@@ -15,4 +14,8 @@
 
 .general-customer-info-item{
     border: 3px;
+}
+
+.custom-well{
+    border: 0px;
 }
