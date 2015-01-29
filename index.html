@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/1PageFNOL.css">
 
 </head>
-<body>
+<body ng-app="">
 
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -58,8 +58,28 @@
         </div>
         <div class="panel panel-default">
             <div class="panel-heading">Kundeinformation</div>
-            <div class="panel-body">
-                <dl class="dl-horizontal">
+            <div class="panel-body table-responsive">
+                <table>
+                    <tr>
+                        <td>Kundenavn</td>
+                        <td>Per Pedersen</td>
+                    </tr>
+                        <td>Kundenummer</td>
+                        <td>176786823689</td>
+
+                    <tr>
+                        <td>Policetype</td>
+                        <td>Indbo</td>
+                    </tr>
+                    <tr>
+                        <td>Vilkårsnummer</td>
+                        <td>T37i87</td>
+
+                    </tr>
+
+                </table>
+
+                <!--<dl class="dl-horizontal" style="text-align: left;">
                     <dt>Kundenavn</dt>
                     <dd>Per Pedersen</dd>
                     <dt>Kundenummer</dt>
@@ -72,7 +92,7 @@
                     <dd>123 465 4574</dd>
                     <dt>Dækninger</dt>
                     <dd>Invalidet<br>Død<br>Død<br>Negl</dd>
-                </dl>
+                </dl>-->
             </div>
         </div>
     </div>
@@ -133,6 +153,29 @@
                     </select>
                 </div>
             </div>
+
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label>Vej / gade</label>
+                    <input class="form-control" ng-disabled="true" placeholder="Borupvang 4, Ballerup">
+                </div>
+
+                <div class="col-md-4">
+                    <label>Hus</label>
+                    <input class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label>tekst</label>
+                    <input class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label>tekst</label>
+                    <input class="form-control">
+                </div>
+
+            </div>
         </div>
 
         <div class="form-group">
@@ -142,9 +185,9 @@
                 </button>
             </div>
         </div>
-        <div class="well custom-well">
+        <div class="well custom-well custom-well-2">
 
-            <h3> Sags specifikke kontakts oplysninger</h3>
+            <h3>Sags specifikke kontakts oplysninger</h3>
 
             <div class="row form-group">
                 <div class="col-md-8">
@@ -243,6 +286,7 @@
 <!-- start build -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular/angular.js"></script>
 <!-- end build -->
 </body>
 </html>

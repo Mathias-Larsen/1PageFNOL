@@ -23,6 +23,16 @@
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
+.custom-well-2{
+
+    border-left: solid;
+    border-color: #6BC3E9;
+}
+
+.active-window-top-background{
+    background-color: #6BC3E9;
+}
+
 .top-menu-outer {
     position: relative;
 }
