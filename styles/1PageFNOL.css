@@ -12,10 +12,18 @@
     border: 0px;
 }
 
-.general-customer-info-item{
-    border: 3px;
-}
-
 .custom-well{
     border: 0px;
+}
+
+.top-menu-outer {
+    position: relative;
+}
+.top-menu-fixed {
+    position: fixed;
+}
+
+body{
+    padding-top: 70px;
+
 }
