@@ -52,7 +52,7 @@
                 <a href="#" class="list-group-item main-menu-item">Afslut skaden</a>
             </div>-->
             <div id="top-menu-scrollspy" class="navbar navbar-primary visible-xs">
-                <ul class="nav nav-tabs nav-stacked">
+                <ul id="top-menu-list" class="nav nav-tabs nav-stacked">
                     <li class="active"><a href="#generalClaimInformation">Generelle skadeoplysninger</a></li>
                     <li><a class="main-nav-item-link" href="#CustomerSpecificDetails"><span style="display:inline-block; width: 10px;"></span>Sagsspecikke kontaktoplysning</a></li>
                     <li><a class="main-nav-item-link" href="#PersonalInjuryInformation">Personskadespecifikt</a></li>
@@ -82,7 +82,7 @@
                 <li><a class="main-nav-item-link" href="#PersonalInjuryInformation">Personskadespecifikt</a></li>
                 <li><a class="main-nav-item-link" href="#NotesSectionID">Notater</a></li>
                 <li><a class="main-nav-item-link" href="#EstimateAndPaySectionID">Estimat og straks betaling</a></li>
-                <li><a class="main-nav-item-link" href="#">Opgaver</a></li>
+                <li><a class="main-nav-item-link" href="#TaskSectionID">Opgaver</a></li>
                 <li><a class="main-nav-item-link" href="#">Breve</a></li>
                 <li><a class="main-nav-item-link" href="#">Afslut skaden</a></li>
                 </ul>
@@ -594,7 +594,6 @@
      </div>
 
 </div>
-
     <!-- Modal -->
     <div class="modal fade" id="policyInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -731,6 +730,7 @@
             </div>
         </div>
     </div>
+
     <!-- start build -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
@@ -739,5 +739,19 @@
     <script src="webapp/FNOLController.js"></script>
     <script src="webapp/FNOLService.js"></script>
     <!-- end build -->
+    <script>
+        var $root = $('html, body');
+        $('a[href*=#]').click(function() {
+            var href = $.attr(this, 'href');
+            $root.animate({
+                scrollTop: $(href).offset().top - 70
+            }, 700, function () {
+                window.location.hash = href;
+            });
+
+            return false;
+        });
+
+    </script>
 </body>
 </html>
