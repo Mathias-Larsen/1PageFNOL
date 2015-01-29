@@ -67,18 +67,31 @@
 
 <div class="col-md-9 col-lg-9 col-sm-9">
     <div>
-        <div>
+        <div class="well custom-well">
 
             <h3>Generelle skadeoplysninger</h3>
 
             <div class="row form-group">
+                <div class="col-md-4">
+                    <label>Something</label>
+                    <input class="form-control" placeholder="tekst.....">
+                </div>
 
+                <div class="col-md-4">
+                    <label>Something</label>
+                    <input class="form-control" placeholder="tekst.....">
+                </div>
+
+                <div class="col-md-4">
+                    <label>Something</label>
+                    <input class="form-control" placeholder="tekst.....">
+                </div>
             </div>
         </div>
 
         <div class="well custom-well">
 
-            <h3>Personspecifikke oplysninger (2)</h3>
+            <h3>Afdelingsspecifikke oplysninger</h3>
 
             <div class="row form-group">
                 <div class="col-md-8">
@@ -103,8 +116,28 @@
                 </div>
             </div>
 
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <label for="WhatHappend">Hvad er der sket?</label>
+                    <select id="WhatHappend" class="form-control">
+                        <option>Nummer 1</option>
+                        <option>Nummer 2</option>
+                        <option>Nummer 3</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label>Skade på...</label>
+                    <select id="DamagedItem" class="form-control">
+                        <option>Fingre på højre hånd</option>
+                        <option>Fingre på venstre hånd</option>
+                        <option>Fod/ankel - højre</option>
+                    </select>
+                </div>
+            </div>
+
             <div class="form-group">
-                <label for="description1">Personskade-specifikke oplysninger</label>
+                <label for="description1">Skadebeskrivelse</label>
                 <textarea class="form-control" id="description1" placeholder="Indtast beskrivelse her..."></textarea>
             </div>
 
