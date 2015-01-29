@@ -1,0 +1,18 @@
+.top-menu{
+    margin-left: 10px;
+    font-size: 12px;
+    border: 0px;
+}
+
+.main-menu-item{
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.general-customer-info {
+    border: 0px;
+}
+
+.general-customer-info-item{
+    border: 3px;
+}
