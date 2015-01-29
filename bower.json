@@ -1,0 +1,17 @@
+{
+  "name": "1PageFNOL",
+  "version": "0.0.0",
+  "authors": [
+    "Mathias-Larsen <Mathias.e.larsen@gmail.com>"
+  ],
+  "description": "Experimental project for developing a 1 page FNOL for Topdanmark",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
