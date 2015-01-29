@@ -10,6 +10,9 @@
 
 .main-nav-item{
     border-bottom: 1px solid;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
     padding: 0px;
     border-color: #d3d3d3;
 }

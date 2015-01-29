@@ -3906,7 +3906,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li > a {
     margin-right: 2px;
     line-height: 1.4;
-    border: 1px solid transparent;
+    border: 0px solid transparent;
     border-radius: 0 0 0 0;
 }
 .nav-tabs > li > a:hover {
@@ -3915,8 +3915,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
-    color: #6f6f6f;
-    background-color: #ffffff;
+    color: #ffffff;
+    background-color: #6BC3E9;
     border: 1px solid #dddddd;
     border-bottom-color: transparent;
     cursor: default;
@@ -6743,7 +6743,7 @@ input[type="checkbox"] {
     border-color: transparent;
 }
 .nav-tabs > li > a {
-    background-color: #e7e7e7;
+    background-color: #ffffff;
     color: #222222;
 }
 .nav-tabs .caret {
