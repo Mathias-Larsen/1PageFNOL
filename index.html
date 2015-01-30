@@ -59,7 +59,6 @@
                     <li><a class="main-nav-item-link" href="#NotesSectionAnchor">Notater</a></li>
                     <li><a class="main-nav-item-link" href="#EstimateAndPaySectionAnchor">Estimat og straks betaling</a></li>
                     <li><a class="main-nav-item-link" href="#TaskSectionAnchor">Opgaver</a></li>
-                    <li><a class="main-nav-item-link" href="#">Breve</a></li>
                     <li><a class="main-nav-item-link" href="#">Afslut skaden</a></li>
                 </ul>
             </div>
@@ -72,9 +71,11 @@
         </div> <!-- navbar-collapse1 -->
     </div> <!-- container fluid -->
 </nav>
+<div class="col-md-1 col-sm-1 col-lg-1">
 
-<div class="col-md-3 col-sm-3 col-lg-3 top-menu-outer visible-xs-block, hidden-xs" >
-    <div class="col-md-3 col-sm-3 col-lg-3 top-menu top-menu-fixed">
+</div>
+<div class="col-md-2 col-sm-2 col-lg-2 top-menu-outer visible-xs-block, hidden-xs top-menu-container" >
+    <div class="col-md-2 col-sm-2 col-lg-2 top-menu top-menu-fixed">
         <div id="top-menu-scrollspy" class="navbar navbar-primary">
             <ul class="nav nav-tabs nav-stacked">
                 <li class="active"><a href="#generalClaimInformationAnchor">Generelle skadeoplysninger</a></li>
@@ -83,7 +84,6 @@
                 <li><a class="main-nav-item-link" href="#NotesSectionAnchor">Notater</a></li>
                 <li><a class="main-nav-item-link" href="#EstimateAndPaySectionAnchor">Estimat og straks betaling</a></li>
                 <li><a class="main-nav-item-link" href="#TaskSectionAnchor">Opgaver</a></li>
-                <li><a class="main-nav-item-link" href="#">Breve</a></li>
                 <li><a class="main-nav-item-link" href="#">Afslut skaden</a></li>
                 </ul>
         </div>
@@ -121,8 +121,8 @@
                     </tr>
 
                 </table>
-                <br>
-                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#policyInfo">
+                <br><br>
+                <button type="button" class="btn btn-primary btn-sm policy-info-button pull-right" data-toggle="modal" data-target="#policyInfo">
                     Policeinformation
                 </button>
                 <!--<dl class="dl-horizontal" style="text-align: left;">
@@ -146,7 +146,7 @@
     </div>
 </div>
 
-<div class="col-md-8 col-lg-8 col-sm-8">
+<div class="col-md-7 col-lg-7 col-sm-7">
     <div>
         <div id="generalClaimInformation" class="well">
         <div>
@@ -229,14 +229,19 @@
 
         <div class="form-group">
             <div align="middle">
-                <button type="button" class="btn btn-default"
+                <!--<button type="button" class="btn btn-default"
                         data-toggle="collapse"
                         data-target="#CustomerSpecificDetails"
                         aria-label="Left Align"
                         aria-expanded="false"
                         aria-controls="CustomerSpecificDetails">
                     <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
-                </button>
+                </button>-->
+                <div class="round-button"><div class="round-button-circle" data-toggle="collapse"
+                                               data-target="#CustomerSpecificDetails"
+                                               aria-label="Left Align"
+                                               aria-expanded="false"
+                                               aria-controls="CustomerSpecificDetails"><div class="arrow-container"><span class="CustomerSpecificDetailsButtonIcon glyphicon glyphicon-chevron-down"></span></div></div>
             </div>
         </div>
 
@@ -422,6 +427,7 @@
         </div>
 
         <div id="EstimateAndPaySectionID" class="well custom-well">
+        <hr/>
 
             <h3 id="EstimateAndPaySectionAnchor">Estimat og straks betaling</h3>
 
@@ -437,6 +443,8 @@
                         Taske Item 3  *  Mulberry 3  *  3.000 kr. </a>
                 </div>
             </div>
+            
+        </div>
 
             <div class="row form-group">
                 <div class="col-md-4">
@@ -758,6 +766,14 @@
             });
 
             return false;
+        });
+#99cc00
+        $('#CustomerSpecificDetails').on('shown.bs.collapse', function() {
+            $(".CustomerSpecificDetailsButtonIcon").addClass('glyphicon-chevron-up').removeClass('glyphicon-chevron-down');
+        });
+
+        $('#CustomerSpecificDetails').on('hidden.bs.collapse', function() {
+            $(".CustomerSpecificDetailsButtonIcon").addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up');
         });
 
     </script>
