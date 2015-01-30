@@ -126,3 +126,13 @@ tr.customer-information-item{
     font-weight:bold;
     text-decoration:none;
 }
+
+.round-button-2 {
+    height: 100px;
+    width: 100px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background-color:#99c000;
+    border-color:#99c000;
+    color: white;
+}
