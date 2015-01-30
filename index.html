@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles/1PageFNOL.css">
 
 </head>
-<body ng-app="1pageFNOL" data-spy="scroll" data-offset="90" data-target="#top-menu-scrollspy">
+<body ng-app="1pageFNOL" data-spy="scroll" data-offset="125" data-target="#top-menu-scrollspy">
 
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
@@ -53,12 +53,12 @@
             </div>-->
             <div id="top-menu-scrollspy" class="navbar navbar-primary visible-xs">
                 <ul id="top-menu-list" class="nav nav-tabs nav-stacked">
-                    <li class="active"><a href="#generalClaimInformation">Generelle skadeoplysninger</a></li>
-                    <li><a class="main-nav-item-link" href="#CustomerSpecificDetails"><span style="display:inline-block; width: 10px;"></span>Sagsspecikke kontaktoplysning</a></li>
-                    <li><a class="main-nav-item-link" href="#PersonalInjuryInformation">Personskadespecifikt</a></li>
-                    <li><a class="main-nav-item-link" href="#NotesSectionID">Notater</a></li>
-                    <li><a class="main-nav-item-link" href="#EstimateAndPaySectionID">Estimat og straks betaling</a></li>
-                    <li><a class="main-nav-item-link" href="#">Opgaver</a></li>
+                    <li class="active"><a href="#generalClaimInformationAnchor">Generelle skadeoplysninger</a></li>
+                    <li><a class="main-nav-item-link" href="#CustomerSpecificDetailsAnchor"><span style="display:inline-block; width: 10px;"></span>Sagsspecikke kontaktoplysning</a></li>
+                    <li><a class="main-nav-item-link" href="#PersonalInjuryInformationAnchor">Personskadespecifikt</a></li>
+                    <li><a class="main-nav-item-link" href="#NotesSectionAnchor">Notater</a></li>
+                    <li><a class="main-nav-item-link" href="#EstimateAndPaySectionAnchor">Estimat og straks betaling</a></li>
+                    <li><a class="main-nav-item-link" href="#TaskSectionAnchor">Opgaver</a></li>
                     <li><a class="main-nav-item-link" href="#">Breve</a></li>
                     <li><a class="main-nav-item-link" href="#">Afslut skaden</a></li>
                 </ul>
@@ -77,12 +77,12 @@
     <div class="col-md-3 col-sm-3 col-lg-3 top-menu top-menu-fixed">
         <div id="top-menu-scrollspy" class="navbar navbar-primary">
             <ul class="nav nav-tabs nav-stacked">
-                <li class="active"><a href="#generalClaimInformation">Generelle skadeoplysninger</a></li>
-                <li><a class="main-nav-item-link" href="#CustomerSpecificDetails"><span style="display:inline-block; width: 10px;"></span>Sagsspecikke kontaktoplysning</a></li>
-                <li><a class="main-nav-item-link" href="#PersonalInjuryInformation">Personskadespecifikt</a></li>
-                <li><a class="main-nav-item-link" href="#NotesSectionID">Notater</a></li>
-                <li><a class="main-nav-item-link" href="#EstimateAndPaySectionID">Estimat og straks betaling</a></li>
-                <li><a class="main-nav-item-link" href="#TaskSectionID">Opgaver</a></li>
+                <li class="active"><a href="#generalClaimInformationAnchor">Generelle skadeoplysninger</a></li>
+                <li><a class="main-nav-item-link" href="#CustomerSpecificDetailsAnchor"><span style="display:inline-block; width: 10px;"></span>Sagsspecikke kontaktoplysning</a></li>
+                <li><a class="main-nav-item-link" href="#PersonalInjuryInformationAnchor">Personskadespecifikt</a></li>
+                <li><a class="main-nav-item-link" href="#NotesSectionAnchor">Notater</a></li>
+                <li><a class="main-nav-item-link" href="#EstimateAndPaySectionAnchor">Estimat og straks betaling</a></li>
+                <li><a class="main-nav-item-link" href="#TaskSectionAnchor">Opgaver</a></li>
                 <li><a class="main-nav-item-link" href="#">Breve</a></li>
                 <li><a class="main-nav-item-link" href="#">Afslut skaden</a></li>
                 </ul>
@@ -151,7 +151,7 @@
         <div id="generalClaimInformation" class="well">
         <div>
 
-            <h3>Generelle skadeoplysninger</h3>
+            <h3 id="generalClaimInformationAnchor">Generelle skadeoplysninger</h3>
 
             <div class="row form-group">
                 <div class="col-md-4">
@@ -243,7 +243,7 @@
         <div class="collapse" id="CustomerSpecificDetails">
             <div>
 
-                <h3>Sagsspecifikke kontakts oplysninger</h3>
+                <h3 id="CustomerSpecificDetailsAnchor">Sagsspecifikke kontakts oplysninger</h3>
 
                 <div class="row form-group">
                     <div class="col-md-8">
@@ -285,7 +285,7 @@
 
         <div id="PersonalInjuryInformation">
 
-            <h3>Personskadespecifikke oplysninger</h3>
+            <h3 id="PersonalInjuryInformationAnchor">Personskadespecifikke oplysninger</h3>
 
             <div class="row form-group">
                 <div class="col-md-8">
@@ -359,7 +359,7 @@
 
         <div id="NotesSectionID" class="well custom-well">
 
-            <h3>Notater</h3>
+            <h3 id="NotesSectionAnchor">Notater</h3>
 
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
@@ -424,7 +424,7 @@
         <div id="EstimateAndPaySectionID" class="well custom-well">
         <hr/>
 
-            <h3>Estimat og straks betaling</h3>
+            <h3 id="EstimateAndPaySectionAnchor">Estimat og straks betaling</h3>
 
         <div id="AddedItemsID" class="list-group col-xs-6>
 
@@ -497,7 +497,7 @@
 
     <div id="TaskSectionID" class="well custom-well">
 
-        <h3>Opgaver</h3>
+        <h3 id="TaskSectionAnchor">Opgaver</h3>
 
         <div class="form-group">
             <div class="col-md-6">
@@ -744,7 +744,7 @@
         $('a[href*=#]').click(function() {
             var href = $.attr(this, 'href');
             $root.animate({
-                scrollTop: $(href).offset().top - 70
+                scrollTop: $(href).offset().top - 90
             }, 700, function () {
                 window.location.hash = href;
             });
