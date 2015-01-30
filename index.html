@@ -510,11 +510,11 @@
                 <label for="TaskDescriptionID">Opgavebeskrivelse</label>
             </div>
 
-            <div class="btn-group col-md-6" align="right">
-                <input id="TaskPriorityLowID" type="radio" title="Low">
-                <input id="TaskPriorityMediumID" type="radio">
-                <input id="TaskPriorityHighID" type="radio">
-                <input id="TaskPrioritySuperHighID" type="radio">
+            <div id="TaskRadioButtonID" class="btn-group col-md-6" role="group" align="right">
+                <input id="TaskPriorityLowID" name="radioGroup" type="radio" data-toggle="tooltip" data-placement="top" title="Lav">
+                <input id="TaskPriorityMediumID" name="radioGroup" type="radio" checked="" data-toggle="tooltip" data-placement="top" title="Mellem">
+                <input id="TaskPriorityHighID" name="radioGroup" type="radio" data-toggle="tooltip" data-placement="top" title="Høj">
+                <input id="TaskPrioritySuperHighID" name="radioGroup" type="radio" data-toggle="tooltip" data-placement="top" title="Super Høj">
             </div>
 
             <textarea class="form-control" id="TaskDescriptionID" placeholder="Indtast opgaver her..."></textarea>
@@ -776,6 +776,18 @@
         $('#CustomerSpecificDetails').on('hidden.bs.collapse', function() {
             $(".CustomerSpecificDetailsButtonIcon").addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up')
             $("#CustomerSpecificDetailsButtonColor").removeAttr('style');
+        });
+
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip({
+                container : 'body'
+            });
+        });
+
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover({
+                container : 'body'
+            });
         });
 
     </script>
