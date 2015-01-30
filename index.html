@@ -237,7 +237,7 @@
                         aria-controls="CustomerSpecificDetails">
                     <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
                 </button>-->
-                <div class="round-button"><div class="round-button-circle" data-toggle="collapse"
+                <div class="round-button"><div class="round-button-circle" id="CustomerSpecificDetailsButtonColor" data-toggle="collapse"
                                                data-target="#CustomerSpecificDetails"
                                                aria-label="Left Align"
                                                aria-expanded="false"
@@ -767,11 +767,13 @@
         });
 
         $('#CustomerSpecificDetails').on('shown.bs.collapse', function() {
-            $(".CustomerSpecificDetailsButtonIcon").addClass('glyphicon-chevron-up').removeClass('glyphicon-chevron-down');
+            $(".CustomerSpecificDetailsButtonIcon").addClass('glyphicon-chevron-up').removeClass('glyphicon-chevron-down')
+            $("#CustomerSpecificDetailsButtonColor").css('background-color', '#99CC00')
         });
 
         $('#CustomerSpecificDetails').on('hidden.bs.collapse', function() {
-            $(".CustomerSpecificDetailsButtonIcon").addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up');
+            $(".CustomerSpecificDetailsButtonIcon").addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up')
+            $("#CustomerSpecificDetailsButtonColor").removeAttr('style');
         });
 
     </script>
