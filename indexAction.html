@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+<head lang="dk">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>1PageFNOL</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/Yeti.css">
+    <link rel="stylesheet" href="styles/1PageFNOL.css">
+
+</head>
+<body ng-app="1pageFNOL" data-spy="scroll" data-offset="125" data-target="#top-menu-scrollspy">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img height="28" src="images/topdanmark.png">
+            </a>
+            <div>
+    </div>
+        </div>
+
+        <!-- collapse stuff -->
+        <div class="collapse navbar-collapse" id="navbar-collapse1">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">
+                        Skadeanlæggelse <span class="sr-only">(current)</span>
+                    </a></li>
+            </ul>
+            <ul class="nav navbar-nav visible-xs">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#policyInfo">
+                        Policeinformation <span class="sr-only">(current)</span>
+                    </a></li>
+            </ul>
+            <!--<div class="list-group visible-xs">
+                <a href="#" class="list-group-item active">Generelle skadeoplysninger</a>
+                <a href="#" class="list-group-item main-menu-item-sub">Sagsspecikke kontaktoplysning</a>
+                <a href="#" class="list-group-item main-menu-item">Personskadespecifikt</a>
+                <a href="#" class="list-group-item main-menu-item">Notater</a>
+                <a href="#" class="list-group-item main-menu-item">Estimat og straks betaling</a>
+                <a href="#" class="list-group-item main-menu-item">Opgaver</a>
+                <a href="#" class="list-group-item main-menu-item">Breve</a>
+                <a href="#" class="list-group-item main-menu-item">Afslut skaden</a>
+            </div>-->
+            <div id="top-menu-scrollspy" class="navbar navbar-primary visible-xs">
+                <ul id="top-menu-list" class="nav nav-tabs nav-stacked">
+                    <li class="active"><a href="#generalClaimInformationAnchor">Generelle skadeoplysninger</a></li>
+                    <li><a class="main-nav-item-link" href="#CustomerSpecificDetailsAnchor"><span style="display:inline-block; width: 10px;"></span>Sagsspecikke kontaktoplysning</a></li>
+                    <li><a class="main-nav-item-link" href="#PersonalInjuryInformationAnchor">Personskadespecifikt</a></li>
+                    <li><a class="main-nav-item-link" href="#NotesSectionAnchor">Notater</a></li>
+                    <li><a class="main-nav-item-link" href="#EstimateAndPaySectionAnchor">Estimat og straks betaling</a></li>
+                    <li><a class="main-nav-item-link" href="#TaskSectionAnchor">Opgaver</a></li>
+                    <li><a class="main-nav-item-link" href="#SaveAndCompleteAnchor">Afslut skaden</a></li>
+                </ul>
+            </div>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Søg">
+                    <button type="submit" class="btn btn-default">Søg</button>
+                </div>
+            </form>
+        </div> <!-- navbar-collapse1 -->
+    </div> <!-- container fluid -->
+</nav>
+<div class="col-md-1 col-sm-1 col-lg-1">
+
+</div>
+<div class="col-md-2 col-sm-2 col-lg-2 top-menu-outer visible-xs-block, hidden-xs top-menu-container" >
+    <div class="col-md-2 col-sm-2 col-lg-2 top-menu top-menu-fixed">
+        <div id="top-menu-scrollspy" class="navbar navbar-primary">
+            <ul class="nav nav-tabs nav-stacked">
+                <li class="active"><a href="#generalClaimInformationAnchor">Generelle skadeoplysninger<span style="color: green;" class="glyphicon glyphicon-ok pull-right"></span></a></li>
+                <li><a class="main-nav-item-link" href="#CustomerSpecificDetailsAnchor"><span style="display:inline-block; width: 10px;"></span>Sagsspecikke kontaktoplysning</a></li>
+                <li><a class="main-nav-item-link" href="#PersonalInjuryInformationAnchor">Personskadespecifikt<span style="color: green;" class="glyphicon glyphicon-ok pull-right"></span></a></li>
+                <li><a class="main-nav-item-link" href="#NotesSectionAnchor">Notater</a></li>
+                <li><a class="main-nav-item-link" href="#EstimateAndPaySectionAnchor">Estimat og straks betaling<span style="color: red;" class="glyphicon glyphicon-remove pull-right"></span></a></li>
+                <li><a class="main-nav-item-link" href="#TaskSectionAnchor">Opgaver</a></li>
+                <li><a class="main-nav-item-link" href="#SaveAndCompleteAnchor">Afslut skaden</a></li>
+                </ul>
+        </div>
+        <br>
+        <div class="panel panel-default">
+            <div class="panel-heading">Kundeinformation</div>
+            <div class="panel-body table-responsive">
+                <table style="width: 100%" class="customer-information-item-content">
+                    <tr class="customer-information-item">
+                        <td class="customer-information-item-headline">Kundenavn</td>
+                        <td class="customer-information-item-content">Per Pedersen</td>
+                    </tr>
+                    <tr class="customer-information-item">
+                        <td class="customer-information-item-headline">Kundenummer</td>
+                        <td class="customer-information-item-content">176786823689</td>
+                    </tr>
+                    <tr class="customer-information-item">
+                        <td class="customer-information-item-headline">Policetype</td>
+                        <td class="customer-information-item-content">Indbo</td>
+                    </tr>
+                    <tr class="customer-information-item">
+                        <td class="customer-information-item-headline">Vilkårsnummer</td>
+                        <td class="customer-information-item-content">T37i87</td>
+
+                    </tr>
+                    <tr class="customer-information-item">
+                        <td class="customer-information-item-headline">Dækninger:</td>
+                        <td class="customer-information-item-content">Invaliditet<br>Død<br>Brille<br>Negl</td>
+
+                    </tr>
+                    <tr class="customer-information-item">
+                        <td class="customer-information-item-headline">Skadenummer:</td>
+                        <td class="customer-information-item-content">123 345 5432</td>
+
+                    </tr>
+
+                </table>
+                <br><br>
+                <button type="button" class="btn btn-primary btn-sm policy-info-button pull-right" data-toggle="modal" data-target="#policyInfo">
+                    Policeinformation
+                </button>
+                <!--<dl class="dl-horizontal" style="text-align: left;">
+                    <dt>Kundenavn</dt>
+                    <dd>Per Pedersen</dd>
+                    <dt>Kundenummer</dt>
+                    <dd>176786823689</dd>
+                    <dt>Policetype</dt>
+                    <dd>Indbo</dd>
+                    <dt>Vilkårsnummer</dt>
+                    <dd>T37i87</dd>
+                    <dt>Skadenummer</dt>
+                    <dd>123 465 4574</dd>
+                    <dt>Dækninger</dt>
+                    <dd>Invalidet<br>Død<br>Død<br>Negl</dd>
+                </dl>-->
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-7 col-lg-7 col-sm-7">
+    <div>
+        <div id="generalClaimInformation" class="well">
+        <div>
+
+            <h3 id="generalClaimInformationAnchor">Generelle skadeoplysninger</h3>
+
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label>Anmeldelses dato</label>
+                    <input class="form-control" type="date" placeholder="Dato">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="claimdate">Skade dato</label>
+                    <input id="ClaimDate" class="form-control" type="date">
+                </div>
+
+                <div class="col-md-4">
+                    <label>Skade tidspunkt</label>
+                    <input class="form-control" type="date">
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-8">
+                    <label>Anmeldt af...</label>
+                    <input class="form-control" placeholder="Kunde">
+                </div>
+
+                <div class="col-md-4">
+                    <label>Anmeldt af andre</label>
+                    <input class="form-control">
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label>Hvor skete skaden?</label>
+                    <select class="form-control">
+                        <option>Nummer 1</option>
+                        <option>Nummer 2</option>
+                        <option>Nummer 3</option>
+                        <option>Nummer 4</option>
+                        <option>Nummer 5</option>
+                    </select>
+                </div>
+
+                <div class="col-md-8">
+                    <label>Land</label>
+                    <select class="form-control">
+                        <option>Danmark</option>
+                        <option>England</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label>Vej / gade</label>
+                    <input class="form-control" ng-disabled="true" placeholder="Borupvang 4, Ballerup">
+                </div>
+
+                <div class="col-md-4">
+                    <label>Hus nr.</label>
+                    <input class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label>Etage</label>
+                    <input class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label>Post nr. + By</label>
+                    <input class="form-control">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div align="middle">
+                <!--<button type="button" class="btn btn-default"
+                        data-toggle="collapse"
+                        data-target="#CustomerSpecificDetails"
+                        aria-label="Left Align"
+                        aria-expanded="false"
+                        aria-controls="CustomerSpecificDetails">
+                    <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                </button>-->
+                <div class="round-button"><div class="round-button-circle" id="CustomerSpecificDetailsButtonColor" data-toggle="collapse"
+                                               data-target="#CustomerSpecificDetails"
+                                               aria-label="Left Align"
+                                               aria-expanded="false"
+                                               aria-controls="CustomerSpecificDetails"><div class="arrow-container"><span class="CustomerSpecificDetailsButtonIcon glyphicon glyphicon-chevron-down"></span></div></div>
+            </div>
+        </div>
+
+        <div class="collapse" id="CustomerSpecificDetails">
+            <div>
+
+                <h3 id="CustomerSpecificDetailsAnchor">Sagsspecifikke kontakts oplysninger</h3>
+
+                <div class="row form-group">
+                    <div class="col-md-8">
+                        <label for="customerID">Kunden vil geme kontakts</label>
+                        <select id="customerID" class="form-control">
+                            <option>Test Data 1</option>
+                            <option>Test Data 2</option>
+                            <option>Test Data 3</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="customerEmailID">Kundes email</label>
+                        <input  id="customerEmailID" type="email" class="form-control" placeholder="test@test.dk">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-4">
+                        <label for="customerTelephoneID">Kundes telefon nr.</label>
+                        <input  id="customerTelephoneID" type="tel" class="form-control">
+                    </div>
+                    <div class="col-md-8">
+                        <label for="customerAddressID">Att adresse / andet adresse</label>
+                        <input  id="customerAddressID" type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-4">
+                        <label for="customerRegistrationNumberID">Reg.</label>
+                        <input  id="customerRegistrationNumberID" type="number" class="form-control">
+                    </div>
+                    <div class="col-md-8">
+                        <label for="customerAccountNumberID">Kundes telefon nr.</label>
+                        <input  id="customerAccountNumberID" type="number" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr/>
+
+        <div id="PersonalInjuryInformation">
+
+            <h3 id="PersonalInjuryInformationAnchor">Personskadespecifikke oplysninger</h3>
+
+            <div class="row form-group">
+                <div class="col-md-8">
+                    <label for="ClaimType">Skadens type</label>
+                    <select id="ClaimType" class="form-control">
+                        <option>Nummer 1</option>
+                        <option>Nummer 2</option>
+                        <option>Nummer 3</option>
+                        <option>Nummer 4</option>
+                        <option>Nummer 5</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="ClaimCategory">Skade-kategori</label>
+                    <select id="ClaimCategory" class="form-control">
+                        <option>Nummer 1</option>
+                        <option>Nummer 2</option>
+                        <option>Nummer 3</option>
+                        <option>Nummer 4</option>
+                        <option>Nummer 5</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <label for="WhatHappend">Hvad er der sket?</label>
+                    <select id="WhatHappend" class="form-control">
+                        <option>Nummer 1</option>
+                        <option>Nummer 2</option>
+                        <option>Nummer 3</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label>Skade på...</label>
+                    <select id="DamagedItem" class="form-control">
+                        <option>Fingre på højre hånd</option>
+                        <option>Fingre på venstre hånd</option>
+                        <option>Fod/ankel - højre</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="description1">Skadebeskrivelse</label>
+                <textarea class="form-control" id="description1" placeholder="Indtast beskrivelse her..."></textarea>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label for="searchCodeID">Søg men kode</label>
+                    <select id="searchCodeID" class="form-control">
+                        <option>Test Data 1</option>
+                        <option>Test Data 2</option>
+                        <option>Test Data 3</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="sideOfTheBodyID">Side på kroppen</label>
+                    <input  id="sideOfTheBodyID" type="text" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <label for="regulationID">Reguleret %</label>
+                    <input  id="regulationID" type="number" class="form-control">
+                </div>
+            </div>
+
+        </div>
+
+
+        <div id="NotesSectionID" class="well custom-well">
+
+            <h3 id="NotesSectionAnchor">Notater</h3>
+
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Collapsible Note Item #1
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            Test note details #1
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Collapsible Note Item #2
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            Test note details #2
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Collapsible Note Item #3
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            Test note details #3
+                        </div>
+                    </div>
+                </div>
+
+             </div>
+
+            <div class="form-group">
+                <label for="NotesDescriptionID">Notater</label>
+                <textarea class="form-control" id="NotesDescriptionID" placeholder="Indtast notater her..."></textarea>
+            </div>
+
+            <div align="right" role="button">
+                <button id="saveNoteButtonID" type="button" class="btn btn-primary btn-sm">Gem</button>
+            </div>
+
+        </div>
+
+        <div id="EstimateAndPaySectionID" class="well custom-well">
+
+            <h3 id="EstimateAndPaySectionAnchor">Estimat og straks betaling</h3>
+
+            <div id="AddedItemsID" class="row form-group">
+                <div class="col-md-12">
+
+                    <label>Tilføjet genstande</label>
+
+                    <a href="#" class="list-group-item"><span class="badge"style="background-color: orange">Afventer regning</span>
+                        Taske Item 1  *  Mulberry 1  *  1.000 kr. </a>
+                    <a href="#" class="list-group-item"><span class="badge" style="background-color: orange">OK til betaling</span>
+                        Taske Item 2  *  Mulberry 2  *  2.000 kr. </a>
+                    <a href="#" class="list-group-item"><span class="badge"style="background-color:#99c000">Betalt</span>
+                        Taske Item 3  *  Mulberry 3  *  3.000 kr. </a>
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-4">
+                    <label for="CategoryID">Vælg kategori</label>
+                    <select id="CategoryID" class="form-control">
+                        <option>Category 1</option>
+                        <option>Category </option>
+                        <option>Category 3</option>
+                        <option>Category 4</option>
+                        <option>Category 5</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="ProductID">Vælg produkt</label>
+                    <select id="ProductID" class="form-control">
+                        <option>Product 1</option>
+                        <option>Product 2</option>
+                        <option>Product 3</option>
+                        <option>Product 4</option>
+                        <option>Product 5</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="PrisID">Pris</label>
+                    <input id="PrisID" class="form-control">
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-8">
+                    <label for="StatusID">Vælg Status</label>
+                    <select id="StatusID" class="form-control">
+                        <option>Status 1</option>
+                        <option>Status 2</option>
+                        <option>Status 3</option>
+                        <option>Status 4</option>
+                        <option>Status 5</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="ParticipantID">Vælg Impliceret</label>
+                    <select id="ParticipantID" class="form-control">
+                        <option>Participant 1</option>
+                        <option>Participant 2</option>
+                        <option>Participant 3</option>
+                        <option>Participant 4</option>
+                        <option>Participant 5</option>
+                    </select>
+                </div>
+            </div>
+
+            <div align="right" role="button">
+                <button id="saveButtonID" type="button" class="btn btn-primary">Gem</button>
+                <button id="saveAndPayButtonID" type="button" class="btn btn-default">Gem Udbet.</button>
+            </div>
+
+        </div>
+
+    <div id="TaskSectionID" class="well custom-well">
+
+        <h3 id="TaskSectionAnchor">Opgaver</h3>
+
+        <div class="form-group">
+            <div class="col-md-6">
+                <label for="TaskDescriptionID">Opgavebeskrivelse</label>
+            </div>
+
+            <div class="btn-group col-md-6" align="right">
+                <input id="TaskPriorityLowID" type="radio" title="Low">
+                <input id="TaskPriorityMediumID" type="radio">
+                <input id="TaskPriorityHighID" type="radio">
+                <input id="TaskPrioritySuperHighID" type="radio">
+            </div>
+
+            <textarea class="form-control" id="TaskDescriptionID" placeholder="Indtast opgaver her..."></textarea>
+        </div>
+
+        <div class="row form-group">
+
+            <div class="col-md-4">
+                <label for="TaskTypeID">Opgave Type</label>
+                <select id="TaskTypeID" class="form-control">
+                    <option>Task Type 1</option>
+                    <option>Task Type 2</option>
+                    <option>Task Type 3</option>
+                    <option>Task Type 4</option>
+                    <option>Task Type 5</option>
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label for="TaskViewDateID">Vis dato</label>
+                <input id="TaskViewDateID" class="form-control" type="date" placeholder="Dato">
+            </div>
+
+            <div class="col-md-4">
+                <label for="TaskDueDateID">Forfalden dato</label>
+                <input id="TaskDueDateID" class="form-control" type="date">
+            </div>
+        </div>
+
+        <div class="row form-group">
+            <div class="col-md-6">
+                <label for="TaskSourceID">Kilde</label>
+                <select id="TaskSourceID" class="form-control">
+                    <option>Task Source 1</option>
+                    <option>Task Source 2</option>
+                    <option>Task Source 3</option>
+                    <option>Task Source 4</option>
+                    <option>Task Source 5</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label for="TaskCategoryID">Kategori</label>
+                <select id="TaskCategoryID" class="form-control">
+                    <option>Task Kategori 1</option>
+                    <option>Task Kategori 2</option>
+                    <option>Task Kategori 3</option>
+                    <option>Task Kategori 4</option>
+                    <option>Task Kategori 5</option>
+                </select>
+            </div>
+
+         </div>
+
+        <div class="row form-group">
+            <div class="col-md-6">
+                <label for="SelectTaskParticipantID">Vælg impliceret</label>
+                <select id="SelectTaskParticipantID" class="form-control">
+                    <option>Task Participant 1</option>
+                    <option>Task Participant 2</option>
+                    <option>Task Participant 3</option>
+                    <option>Task Participant 4</option>
+                    <option>Task Participant 5</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label for="SelectClaimHanlderID">Vælg skadebehanlder</label>
+                <select id="SelectClaimHanlderID" class="form-control">
+                    <option>Task Claim Handler 1</option>
+                    <option>Task Claim Handler 2</option>
+                    <option>Task Claim Handler 3</option>
+                    <option>Task Claim Handler 4</option>
+                    <option>Task Claim Handler 5</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div align="right" role="button">
+            <button id="saveTaskButtonID" type="button" class="btn btn-primary btn-sm">Gem</button>
+        </div>
+     </div>
+
+    <div id="SaveAndCompleteID" class="well custom-well-3">
+
+        <div align="middle" role="button">
+            <button id="saveAndCompleteButtonID" type="button" class="round-button-2">Afslut anlæggelse</button>
+        </div>
+
+
+
+    </div>
+
+</div>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div id="SaveAndCompleteAnchor">
+        </div>
+    <!-- Modal -->
+    <div class="modal fade" id="policyInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Policeinformation</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <tr>
+                            <td width="159">Status</td>
+                            <td width="205">Løbende </td>
+                        </tr>
+                        <tr>
+                            <td>Forsikrede person(er)</td>
+                            <td>Jenny Pederesen, 120953 -xxxx</td>
+                        </tr>
+                        <tr>
+                            <td>Dækninger</td>
+                            <td>Invaliditet med tandskade</td>
+                        </tr>
+                        <tr>
+                            <td>Dødsfalds sum</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Invaliditetssum</td>
+                            <td>1.119.000</td>
+                        </tr>
+                        <tr>
+                            <td>Begravelseshjælp</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Rådighedsbeløb</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Aftale </td>
+                            <td>TopPlus boligaftale</td>
+                        </tr>
+                        <tr>
+                            <td><br></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td width="164">Produkt</td>
+                            <td width="254">Heltidsulykke Udv. 5%</td>
+                        </tr>
+                        <tr>
+                            <td>Forsikringstager </td>
+                            <td>Kenny Pedersen</td>
+                        </tr>
+                        <tr>
+                            <td>Police type</td>
+                            <td>Ulykke</td>
+                        </tr>
+                        <tr>
+                            <td>Dagpenge sum</td>
+                            <td>0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Præmie </td>
+                            <td>1556.00</td>
+                        </tr>
+                        <tr>
+                            <td>Termin </td>
+                            <td>Helårlig </td>
+                        </tr>
+                        <tr>
+                            <td>Udløbsdato</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Vilkår</td>
+                            <td>6632-1</td>
+                        </tr>
+                        <tr>
+                            <td><p>Under adresse</p></td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>By</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Brandkasse Nr og Navn </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Brandkasse (%)</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>Beskæftigelse </td>
+                            <td>A: administration eller tilsvarende arbejde</td>
+                        </tr>
+                        <tr>
+                            <td>Fare klasse</td>
+                            <td>1A</td>
+                        </tr>
+                        <tr>
+                            <td>Farlig sport</td>
+                            <td><input type="checkbox" name="checkbox" id="checkbox" />
+                                <label for="checkbox"></label></td>
+                        </tr>
+                        <tr>
+                            <td>Ekstra dækning</td>
+                            <td><input type="checkbox" name="checkbox2" id="checkbox2" /></td>
+                        </tr>
+                        <tr>
+                            <td>Præmie status</td>
+                            <td>Ikraft pr. skadedato</td>
+                        </tr>
+                        <tr>
+                            <td>I kraft pr./ændret pr.</td>
+                            <td>01-09-2009</td>
+                        </tr>
+                        <tr>
+                            <td>Sidst ændret</td>
+                            <td>20-12-2014</td>
+                        </tr>
+                        <tr>
+                            <td>Oprindelig ikraft. dato</td>
+                            <td>01-09-1997</td>
+                        </tr>
+                    </table>
+
+                     </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- start build -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="webapp/app.js"></script>
+    <script src="webapp/FNOLController.js"></script>
+    <script src="webapp/FNOLService.js"></script>
+    <!-- end build -->
+    <script>
+        var $root = $('html, body');
+        $('a[href*=#]').click(function() {
+            var href = $.attr(this, 'href');
+            $root.animate({
+                scrollTop: $(href).offset().top - 90
+            }, 700, function () {
+                window.location.hash = href;
+            });
+
+            return false;
+        });
+
+        $('#CustomerSpecificDetails').on('shown.bs.collapse', function() {
+            $(".CustomerSpecificDetailsButtonIcon").addClass('glyphicon-chevron-up').removeClass('glyphicon-chevron-down')
+            $("#CustomerSpecificDetailsButtonColor").css('background-color', '#99CC00')
+        });
+
+        $('#CustomerSpecificDetails').on('hidden.bs.collapse', function() {
+            $(".CustomerSpecificDetailsButtonIcon").addClass('glyphicon-chevron-down').removeClass('glyphicon-chevron-up')
+            $("#CustomerSpecificDetailsButtonColor").removeAttr('style');
+        });
+
+    </script>
+</body>
+</html>
