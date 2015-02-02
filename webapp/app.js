@@ -4,4 +4,4 @@
 
 'use strict';
 
-var fnolModule = angular.module('1pageFNOL');
+angular.module('1pageFNOL', []);
