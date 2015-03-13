@@ -11,6 +11,7 @@
 
         var vm = this;
         vm.generalExpand = false;
+        vm.currentDate = new Date();
 
 
         activate();
